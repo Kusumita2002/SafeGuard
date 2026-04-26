@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6c18be52.css",
+    "main.js": "/static/js/main.5005a58a.js",
+    "static/js/453.10b8ece0.chunk.js": "/static/js/453.10b8ece0.chunk.js",
+    "static/media/emergency-messaging.jpg": "/static/media/emergency-messaging.948581e65501eb71b3e7.jpg",
+    "static/media/voice-sos.jpg": "/static/media/voice-sos.16cefffa38dc14c914ee.jpg",
+    "static/media/gps-sharing.jpg": "/static/media/gps-sharing.27d83de2f1a35373d4fa.jpg",
+    "static/media/video-call.jpg": "/static/media/video-call.8e0bb440d7d4e01b3c6a.jpg",
+    "static/media/ai-assistant.jpg": "/static/media/ai-assistant.721427cd3525eeb4017b.jpg",
+    "index.html": "/index.html",
+    "main.6c18be52.css.map": "/static/css/main.6c18be52.css.map",
+    "main.5005a58a.js.map": "/static/js/main.5005a58a.js.map",
+    "453.10b8ece0.chunk.js.map": "/static/js/453.10b8ece0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c18be52.css",
+    "static/js/main.5005a58a.js"
+  ]
+}
