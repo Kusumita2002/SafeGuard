@@ -1,0 +1,980 @@
+.video-preview {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #000;
+}
+
+/* Global layout */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f3f4f6;
+}
+
+.sg-dashboard {
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+/* Header / hero */
+.sg-hero {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 18px 32px 28px;
+}
+
+.sg-hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sg-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sg-logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.sg-logo-text {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sg-subtitle-text {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.sg-welcome-text {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.sg-user-info-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sg-home-tab-btn {
+  border-radius: 999px;
+  border: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.sg-home-tab-btn.active {
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.sg-logout-btn {
+  border-radius: 999px;
+  border: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  background: #ef4444;
+  color: #ffffff;
+}
+
+/* Main layout */
+.sg-main {
+  max-width: 1120px;
+  margin: 12px auto 40px;
+  padding: 0 16px 32px;
+}
+
+/* Generic card */
+.sg-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  padding: 18px 22px;
+  box-sizing: border-box;
+}
+
+/* Home row: profile left + SOS right */
+.sg-home-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Profile */
+.sg-profile-card-big {
+  width: 360px;
+}
+
+.sg-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.sg-profile-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #4b5563;
+}
+
+.sg-profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.sg-profile-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sg-profile-name-big {
+  margin: 2px 0 4px;
+  font-size: 16px;
+}
+
+.sg-photo-upload-label {
+  display: inline-block;
+  font-size: 12px;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.sg-photo-upload-label input {
+  display: none;
+}
+
+.sg-profile-edit {
+  margin-left: auto;
+}
+
+.sg-profile-row {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+/* Home right (SOS) */
+.sg-home-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form fields */
+.sg-field-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.sg-field-label input {
+  margin-top: 4px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.sg-field-label select {
+  margin-top: 4px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+/* Buttons */
+.sg-btn {
+  border-radius: 8px;
+  border: none;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.sg-btn-primary {
+  background: #2563eb;
+}
+
+.sg-btn-secondary {
+  background: #6b7280;
+}
+
+/* Consent strip */
+.sg-consent-strip {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.sg-consent-checkbox {
+  font-size: 12px;
+  color: #374151;
+}
+
+/* How-to section */
+.sg-howto-section .sg-card {
+  width: 100%;
+}
+
+.sg-howto-search {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.sg-howto-tabs {
+  margin-top: 12px;
+}
+
+.sg-howto-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sg-howto-tab-btn {
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  background: #f3f4f6;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.sg-howto-tab-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.sg-howto-fullcard {
+  width: 100%;
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  box-sizing: border-box;
+}
+
+.sg-howto-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.sg-howto-fullcard h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.sg-howto-fullcard ol {
+  margin-top: 4px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+/* Features */
+.sg-features-page .sg-card {
+  width: 100%;
+}
+
+.sg-feature-select {
+  margin-top: 8px;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.sg-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.sg-gps-layout {
+  display: flex;
+  gap: 12px;
+}
+
+.sg-gps-map {
+  flex: 2;
+  min-height: 150px;
+  border-radius: 12px;
+  background: #e5e7eb;
+}
+
+.sg-gps-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sg-gps-label {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.sg-gps-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Emergency messaging */
+.sg-emergency-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sg-message-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+/* SOS layout */
+.sg-sos-layout {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.sg-sos-top {
+  display: flex;
+  justify-content: center;
+}
+
+.sg-sos-big-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: none;
+  background: radial-gradient(circle at 30% 20%, #ff7b7b, #dc2626);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 12px 30px rgba(220, 38, 38, 0.5);
+  cursor: pointer;
+}
+
+.sg-sos-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 480px; /* widened */
+  max-width: 100%;
+}
+
+.sg-sos-gps-card h3,
+.sg-sos-upload-card h3 {
+  margin-bottom: 8px;
+}
+
+/* container that can show either static map or last photo */
+.sg-sos-map-placeholder {
+  height: 260px;    /* match video height */
+  border-radius: 8px;
+  background: #000;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.sg-sos-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.sg-sos-gps-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.sg-sos-upload-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.sg-upload-photo-btn {
+  background: #2563eb;
+}
+
+.sg-upload-video-btn {
+  background: #7c3aed;
+}
+
+.sg-sos-note {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.sg-sos-status {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #374151;
+  text-align: center;
+}
+
+/* Contact info */
+.sg-contact-info {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #4b5563;
+}
+
+.sg-contact-info p {
+  margin: 2px 0;
+}
+
+/* Feedback form */
+.sg-feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sg-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .sg-home-row {
+    flex-direction: column;
+  }
+
+  .sg-profile-card-big {
+    width: 100%;
+  }
+
+  .sg-gps-layout {
+    flex-direction: column;
+  }
+
+  .sg-sos-cards {
+    width: 100%;
+  }
+}
+
+/* Auth pages */
+.auth-page {
+  min-height: 100vh;
+  background: #2563eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  width: 360px;
+  max-width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 24px 28px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  text-align: center;
+}
+
+.auth-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.auth-subtitle {
+  margin: 4px 0 16px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.auth-input-label {
+  font-size: 13px;
+}
+
+.auth-input {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.auth-button {
+  margin-top: 8px;
+  width: 100%;
+  border-radius: 999px;
+  border: none;
+  padding: 8px 0;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth-footer-text {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.auth-footer-link {
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.auth-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 12px;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+/* Video call / media card */
+.sg-video-card {
+  grid-column: span 2;
+  min-height: 260px;
+}
+
+@media (max-width: 768px) {
+  .sg-video-card {
+    grid-column: span 1;
+    min-height: 220px;
+  }
+}
+
+/* Share Photos/Videos panel tweak */
+.sg-sos-upload-card {
+  min-height: 260px;
+  padding-top: 20px;
+}
+
+.sg-sos-upload-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sg-sos-upload-card img {
+  height: 120px !important;
+}
+
+/* Authority dashboard layout */
+.auth-root {
+  display: grid;
+  grid-template-columns: 1.2fr 1.6fr 1.2fr;
+  gap: 20px;
+  padding: 24px;
+  background: #020617;
+  color: #e5e7eb;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+}
+
+.auth-left,
+.auth-center,
+.auth-right {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 16px;
+  padding: 16px 20px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.auth-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.auth-table th,
+.auth-table td {
+  padding: 6px 8px;
+}
+
+.auth-table th {
+  text-align: left;
+  color: #9ca3af;
+  border-bottom: 1px solid #334155;
+}
+
+.auth-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+/* Unknown tracker alerts section */
+.tracker-section {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 20px;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.tracker-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Cards */
+.tracker-card {
+  border-radius: 20px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* top yellow card: location required */
+.tracker-location-card {
+  background: #fff7de;
+  color: #111827;
+}
+
+.tracker-card-icon {
+  font-size: 22px;
+  margin-top: 2px;
+}
+
+.tracker-card-body h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.tracker-card-body p {
+  margin: 2px 0;
+  font-size: 13px;
+}
+
+/* "Turn on location" link‑style button */
+.tracker-link-button {
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+  color: #b45309;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* status pill (green) */
+.tracker-status-card {
+  background: #111827;
+  border-radius: 24px;
+  border: 1px solid #374151;
+  padding: 14px 18px;
+  align-items: center;
+}
+
+.tracker-status-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.tracker-status-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracker-status-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.tracker-status-sub {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* manual scan block */
+.tracker-manual {
+  margin-top: 18px;
+}
+
+.tracker-manual h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.tracker-manual p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+/* Scan now button */
+.tracker-scan-button {
+  margin-top: 12px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #4f46e5;
+  color: #e5e7eb;
+}
+
+.tracker-scan-button:disabled {
+  background: #6366f1;
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* info text & results */
+.tracker-info {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #d1d5db;
+}
+
+.tracker-results {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.tracker-result-item {
+  margin-top: 2px;
+}
+.sg-card.tracker-full {
+  grid-column: 1 / -1;
+}
+.authority-dashboard {
+  background: #020617;
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+.panel {
+  background: #020f3a;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+/* =========================
+   FIX CARD WIDTH ISSUE
+   ========================= */
+
+/* Ensure cards don’t shrink */
+.sg-features-grid > .sg-card {
+  min-width: 0;
+  width: 100%;
+}
+
+/* If AI Assistant is inside grid */
+.sg-ai-card {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* =========================
+   AI ASSISTANT DESIGN
+   ========================= */
+
+/* Top buttons (RED + BLUE) */
+.sg-ai-top {
+  display: flex;
+  gap: 12px;
+}
+
+.sg-ai-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap; /* prevent breaking */
+}
+
+/* Danger button */
+.sg-ai-btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.sg-ai-btn-danger:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+}
+
+/* Guide button */
+.sg-ai-btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.sg-ai-btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+
+/* =========================
+   SECONDARY BUTTONS
+   ========================= */
+
+.sg-ai-secondary {
+  display: flex;
+  gap: 8px;
+}
+
+.sg-ai-small-btn {
+  flex: 1;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.sg-ai-small-btn:hover {
+  background: #d1d5db;
+}
+
+
+/* =========================
+   MAP FIX (VERY IMPORTANT)
+   ========================= */
+
+.sg-ai-map {
+  width: 100%;
+  height: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+}
+
+
+/* =========================
+   INFO BOX
+   ========================= */
+
+.sg-ai-info {
+  background: #dbeafe;
+  border-left: 5px solid #3b82f6;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #1e3a8a;
+  line-height: 1.4;
+}
+
+
+/* =========================
+   BOTTOM SECTION
+   ========================= */
+
+.sg-ai-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sg-ai-status {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Start Navigation button */
+.sg-ai-start-btn {
+  background: #22c55e;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sg-ai-start-btn:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+

@@ -1,0 +1,26 @@
+.ai-assistant {
+  padding: 16px;
+  border-radius: 10px;
+  background: #f5f7fb;
+  border: 1px solid #dbe3f0;
+}
+
+.ai-assistant h4 {
+  margin-bottom: 8px;
+  color: #1c2b4a;
+}
+
+.ai-assistant p {
+  margin-bottom: 12px;
+  color: #44516b;
+  font-size: 14px;
+}
+
+.ai-sos-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
