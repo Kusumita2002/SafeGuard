@@ -1,3 +1,4 @@
+const cors = require("cors");
 const express = require("express");
 const cors = require("cors");
 const multer = require("multer");
@@ -6,7 +7,7 @@ const fs = require("fs");
 const http = require("http");
 const { Server } = require("socket.io");
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // ------------ express + http + socket.io ------------
 const app = express();

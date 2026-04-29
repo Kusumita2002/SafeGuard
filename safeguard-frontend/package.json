@@ -1,5 +1,6 @@
 {
   "name": "safeguard-frontend",
+  "homepage": "https://kusumita2002.github.io/SafeGuard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -99,7 +99,7 @@ const EmergencySOS = ({ user }) => {
       formData.append('latitude', latitude);
       formData.append('longitude', longitude);
 
-      const res = await fetch('http://localhost:5000/api/emergency-sos', {
+      const res = await fetch('https://safeguard-backend-1-4rf1.onrender.com/api/emergency-sos', {
         method: 'POST',
         body: formData,
       });

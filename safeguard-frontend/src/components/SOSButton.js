@@ -105,7 +105,7 @@ const EmergencySOS = ({ user, disabled }) => {
       formData.append('latitude', latitude);
       formData.append('longitude', longitude);
 
-      const res = await fetch('http://localhost:5000/api/emergency-sos', {
+      const res = await fetch('https://safeguard-backend-1-4rf1.onrender.com/api/emergency-sos', {
         method: 'POST',
         body: formData,
       });
@@ -176,7 +176,7 @@ const EmergencySOS = ({ user, disabled }) => {
               className="sg-btn sg-btn-primary"
               onClick={async () => {
                 if (!lastLocation) return;
-                await fetch('http://localhost:5000/api/share-location-once', {
+                await fetch('https://safeguard-backend-1-4rf1.onrender.com/api/share-location-once', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({
@@ -192,7 +192,7 @@ const EmergencySOS = ({ user, disabled }) => {
             <button
               className="sg-btn sg-btn-secondary"
               onClick={() => {
-                fetch('http://localhost:5000/api/stop-location', {
+                fetch('https://safeguard-backend-1-4rf1.onrender.com/api/stop-location', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ email: user.email }),

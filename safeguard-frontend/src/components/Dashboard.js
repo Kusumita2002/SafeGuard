@@ -106,7 +106,7 @@ const Dashboard = ({ user, onLogout }) => {
   ];
 
   const handleTriggerSOS = async () => {
-    await fetch('http://localhost:5000/api/sos', {
+    await fetch('https://safeguard-backend-1-4rf1.onrender.com/api/sos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -117,7 +117,7 @@ const Dashboard = ({ user, onLogout }) => {
   };
 
   const sendEmergencyMessage = async (type, text) => {
-    await fetch('http://localhost:5000/api/send-emergency-message', {
+    await fetch('https://safeguard-backend-1-4rf1.onrender.com/api/send-emergency-message', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -439,7 +439,7 @@ const Dashboard = ({ user, onLogout }) => {
                                   setFeatureGps({ latitude, longitude });
 
                                   await fetch(
-                                    'http://localhost:5000/api/share-location-once',
+                                    'https://safeguard-backend-1-4rf1.onrender.com/api/share-location-once',
                                     {
                                       method: 'POST',
                                       headers: {
@@ -472,7 +472,7 @@ const Dashboard = ({ user, onLogout }) => {
                             className="sg-btn sg-btn-secondary"
                             onClick={async () => {
                               await fetch(
-                                'http://localhost:5000/api/stop-location',
+                                'https://safeguard-backend-1-4rf1.onrender.com/api/stop-location',
                                 {
                                   method: 'POST',
                                   headers: {
@@ -591,7 +591,7 @@ const Dashboard = ({ user, onLogout }) => {
                   setFeedbackStatus('Sending...');
                   try {
                     const res = await fetch(
-                      'http://localhost:5000/api/feedback',
+                      'https://safeguard-backend-1-4rf1.onrender.com/api/feedback',
                       {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },

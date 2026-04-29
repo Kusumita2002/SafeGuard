@@ -4,7 +4,7 @@ import axios from 'axios';
 import AuthLayout from '../components/AuthLayout';
 import '../App.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = "https://safeguard-backend-1-4rf1.onrender.com/api";
 
 const Signup = ({ onSignup, goToLogin }) => {
   const [formData, setFormData] = useState({

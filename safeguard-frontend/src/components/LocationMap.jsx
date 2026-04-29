@@ -30,7 +30,7 @@ const MyLocation = ({ user }) => {
         setStatus('Location received. Sharing with server...');
 
         try {
-          await fetch('http://localhost:5000/api/share-location-once', {
+          await fetch('https://safeguard-backend-1-4rf1.onrender.com/api/share-location-once', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

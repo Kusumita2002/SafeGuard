@@ -12,11 +12,11 @@ import MessagePanel from "./MessagePanel";
 import VoicePanel from "./VoicePanel";
 import AiPanel from "./AiPanel";
 
-const socket = io("http://localhost:5000", {
+const socket = io("https://safeguard-backend-1-4rf1.onrender.com", {
   transports: ["websocket"],
 });
 
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://safeguard-backend-1-4rf1.onrender.com";
 
 const AuthorityDashboard = () => {
   const navigate = useNavigate();

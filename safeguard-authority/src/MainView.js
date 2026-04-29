@@ -14,15 +14,15 @@ const MainView = ({ selectedSos }) => {
   const { id, triggeredAt, message, location, media } = selectedSos;
 
   const photoUrl = media?.photoUrl
-    ? `http://localhost:5000${media.photoUrl}`
+    ? `https://safeguard-backend-1-4rf1.onrender.com${media.photoUrl}`
     : null;
 
   const videoUrl = media?.videoUrl
-    ? `http://localhost:5000${media.videoUrl}`
+    ? `https://safeguard-backend-1-4rf1.onrender.com${media.videoUrl}`
     : null;
 
   const audioUrl = media?.audioUrl
-    ? `http://localhost:5000${media.audioUrl}`
+    ? `https://safeguard-backend-1-4rf1.onrender.com${media.audioUrl}`
     : null;
 
   const latitude = Number(location?.lat ?? location?.latitude);

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import AuthLayout from '../components/AuthLayout';
 import '../App.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = "https://safeguard-backend-1-4rf1.onrender.com/api";
 
 const Login = ({ onLogin, goToSignup }) => {
   const [form, setForm] = useState({ email: '', password: '' });

@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://safeguard-backend-1-4rf1.onrender.com/api';
 
 export const authAPI = {
   signup: (data) => axios.post(`${API_URL}/signup`, data),
